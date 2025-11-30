@@ -27,15 +27,17 @@ Abra um terminal e execute:
 ```bash
 cd server
 npm install
+```
 (Isso instalará o express, socket.io e cors)
 
-2. Configurar o Cliente (Frontend)
+### 2. Configurar o Cliente (Frontend)
 Abra outro terminal (mantenha o anterior aberto ou volte para a raiz) e execute:
 
-Bash
+```bash
 
 cd client
 npm install
+```
 (Isso instalará o react, react-dom, react-scripts e socket.io-client)
 
 ▶️ Como Rodar o Projeto
@@ -44,20 +46,22 @@ Você precisará de dois terminais rodando simultaneamente.
 Passo 1: Iniciar o Backend
 No terminal da pasta /server:
 
-Bash
+```bash
 
 node index.js
+```
 ✅ Você deve ver a mensagem: SERVIDOR RODANDO NA PORTA 3001
 
 Passo 2: Iniciar o Frontend
 No terminal da pasta /client:
 
-Bash
+```
 
 npm start
+```
 ✅ Isso abrirá o navegador automaticamente em http://localhost:3000.
 
-🎮 Como Jogar (Testando Multiplayer)
+## 🎮 Como Jogar (Testando Multiplayer)
 Para simular uma partida multiplayer no seu próprio computador:
 
 Jogador 1 (Criar Sala):
@@ -88,7 +92,7 @@ Assim que o segundo jogador entrar, o jogo iniciará automaticamente em ambas as
 
 As cartas serão distribuídas e o jogo indicará de quem é a vez.
 
-🐛 Solução de Problemas Comuns
+## 🐛 Solução de Problemas Comuns
 Erro: "Address already in use":
 
 Significa que a porta 3000 ou 3001 já está ocupada. Feche outros terminais Node.js abertos ou reinicie o computador.
@@ -101,7 +105,7 @@ Não consigo comprar cartas:
 
 O jogo segue a regra estrita do UNO: se você tem uma carta jogável na mão, o botão de comprar fica desabilitado. Se quiser testar livremente, edite o arquivo server/gameLogic.js e comente a verificação no método drawCard.
 
-📂 Estrutura do Projeto
+##  Estrutura do Projeto
 /server: Contém a lógica do jogo (gameLogic.js) e o servidor socket (index.js).
 
 /client: Contém a interface React (App.js, components/).
